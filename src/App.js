@@ -1,14 +1,11 @@
 import './App.css';
 import LoginView from './views/LoginView';
-import Scoreboard from './views/Scoreboard';
 import Navigation from './views/Navigation';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <LoginView></LoginView>
-{/*       <Navigation></Navigation>
-      <Scoreboard></Scoreboard> */}
     </div>
   );
 }

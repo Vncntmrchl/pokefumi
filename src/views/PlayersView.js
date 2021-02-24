@@ -1,8 +1,10 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 
-class PlayersView extends Components {
+class PlayersView extends Component {
     
     render () {
-
+        return <h1>Players playing!</h1>
     }
 }
+
+export default PlayersView;
