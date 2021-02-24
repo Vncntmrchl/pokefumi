@@ -3,13 +3,24 @@ import './style.css';
 
 class LoginView extends Component {
 
+    constructor() {
+        super();
+        this.state = { username: '' };
+        this.proposedName = React.createRef();
+    }
+
+    logUsername() {
+        let currentName = this.proposedName.current.value;
+        this.setState({username: currentName});
+    }
+
     render() {
         return (
-        <div class="login" >
+        <div className="login" >
             <h1>Login</h1>
-            <form method="post">
-                <input type="text" name="u" placeholder="Username" required="required" />
-                <button type="submit" class="btn btn-primary btn-block btn-large" >Start</button>
+            <form method="POST">
+                <input type="text" name="u" placeholder="Username" required="required" ref={ this.proposedName } />
+                <button className="btn btn-primary btn-block btn-large" onSubmit={ this.logUsername }>Start</button>
             </form>
         </div>
         );

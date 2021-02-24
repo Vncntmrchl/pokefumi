@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import LoginView from './views/LoginView';
+import Scoreboard from './views/Scoreboard';
+import Navigation from './views/Navigation';
 
 function App() {
   return (
-    <LoginView></LoginView>
+    <div>
+      <LoginView></LoginView>
+{/*       <Navigation></Navigation>
+      <Scoreboard></Scoreboard> */}
+    </div>
   );
 }
 
