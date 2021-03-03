@@ -3,14 +3,22 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 class Scoreboard extends Component {
 
-    constructor(playersList) {
+    constructor() {
         super();
-        this.playersList = playersList;
+        this.state = { playersList: [{ name: 'Simon', id: 1, score: 0 }, { name: 'Théo', id: 2, score: 2 },{ name: 'Samir', id: 3, score: 1 }]};
+        // this.setState( () => ({playersList : [{ name: 'Simon', id: 1, score: 0 }, { name: 'Théo', id: 2, score: 2 }]})) 
+
+    }
+
+    componentDidMount(){
+        let playersList = this.state.playersList
+        playersList.sort((a,b) => b.score - a.score)
+        this.setState({playersList})
     }
 
     render() {
 
-        let playersList = [{ name: 'Simon', id: 1, score: 0 }, { name: 'Théo', id: 2, score: 0 }];
+
         return (
             <div className="container p-5">
                 <table className="table table-dark">
@@ -22,7 +30,7 @@ class Scoreboard extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {playersList.map(player => (
+                        {this.state.playersList.map(player => (
                             <tr>
                                 <th scope="row">{player.id}</th>
                                 <td> {player.name}</td>
