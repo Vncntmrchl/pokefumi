@@ -9,7 +9,7 @@ class PlayersView extends Component {
 
     render () {
 
-        this.playerslist = [{id:1,name:"sacha de bourg palette"},{id:2,name:"team rocket"}]
+        this.playerslist = [{id:1,name:"Simon"},{id:2,name:"Théo"},{id:3,name:"Samir"}];
 
         return (
             <div className="container p-5">
