@@ -1,9 +1,37 @@
 import React, { Component } from 'react';
 
 class PlayersView extends Component {
-    
+
+    constructor() {
+        super();
+        this.playerslist = [];
+    }
+
     render () {
-        return <h1>Players playing!</h1>
+
+        this.playerslist = [{id:1,name:"Simon"},{id:2,name:"Théo"},{id:3,name:"Samir"}];
+
+        return (
+            <div className="container p-5">
+                <table className="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.playerslist.map(player => (
+                            <tr>
+                                <th scope="row">{player.id}</th>
+                                <td> {player.name}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        );
     }
 }
 

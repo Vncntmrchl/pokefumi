@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
+import {matches} from '../models/match'
 
 class Matches extends Component {
 
     constructor() {
         super();
-        this.matcheslist = [];
+        this.state = {}
+        this.state.matches = matches
+        this.matcheslist = matches;
+    }
+
+    componentDidMount(){
+        console.log(matches)
     }
 
     render() {
-
-        this.matcheslist = [{ id: 1, idPlayer1: 1, idPlayer2: 2, pokemonsPlayer1: 'Bleu | Gris | Vert', pokemonsPlayer2: 'Rouge | Jaune | Violet', status: 'Over', winner: 'Player 1'}];
-
         return (
             <div className="container p-5">
                 <table className="table table-dark">
@@ -28,7 +32,7 @@ class Matches extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.matcheslist.map(match => (
+                        {this.state.matches.map(match => (
                             <tr>
                                 <th scope="row">{match.id}</th>
                                 <td> {match.idPlayer1}</td>
