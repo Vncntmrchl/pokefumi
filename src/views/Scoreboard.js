@@ -30,7 +30,7 @@ class Scoreboard extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.playersList.map(player => (
+                        {this.state.playersList.map((player,index) => index<10 && (
                             <tr>
                                 <th scope="row">{player.id}</th>
                                 <td> {player.name}</td>

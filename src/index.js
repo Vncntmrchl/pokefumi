@@ -8,6 +8,7 @@ import PlayersView from './views/PlayersView';
 import Matches from './views/Matches';
 import Scoreboard from './views/Scoreboard';
 import Navigation from './views/Navigation';
+import CreateMatch from './views/CreateMatch';
 
 const routs = (
   < Router >
@@ -17,6 +18,7 @@ const routs = (
         <Route path="/players" component={ PlayersView } />
         <Route path="/matches" component={ Matches } />
         <Route path="/scores" component={ Scoreboard } />
+        <Route path="/creatematch" component={CreateMatch} />
      </div>
   </ Router >
 );

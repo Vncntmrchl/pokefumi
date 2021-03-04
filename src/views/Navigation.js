@@ -5,16 +5,18 @@ class Navigation extends Component {
     render() {
         return (
             <div>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a href="/" class="nav-item nav-link active"> Home </a>
-                            <a href="/players" class="nav-item nav-link"> Players </a>
-                            <a href="/matches" class="nav-item nav-link"> Matches </a>
-                            <a href="/scores" class="nav-item nav-link"> Scores </a>
+                    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div className="navbar-nav">
+                            <a href="/" className="nav-item nav-link active"> Home </a>
+                            <a href="/players" className="nav-item nav-link"> Players </a>
+                            <a href="/matches" className="nav-item nav-link"> Matches </a>
+                            <a href="/scores" className="nav-item nav-link"> Scores </a>
+                            <a href="/creatematch" className="nav-item nav-link"> Create Match </a>
+
                         </div>
                     </div>
                 </nav>
